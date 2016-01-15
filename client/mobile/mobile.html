@@ -1,0 +1,30 @@
+<template name="mobile">
+  <div class="container">
+    <div class="row">
+      <h1>Archaeology Remote Site Time Clock</h1>
+    </div>
+
+    <div class="row">
+      {{> quickForm id="clockIn" collection="TimeRecords" type="insert"}}
+    </div>
+
+
+    <div class="row">
+      Currently working:
+      <table class="table">
+        <tbody>
+          {{#each currentlySignedIn}}
+          <tr>
+            <td>{{employeeName}}</td>
+            <td>{{projectName}}</td>
+            <td>{{jobSite}}</td>
+            <td>{{clockedIn}}</td>
+            <td><div class="clockout btn btn-primary">clock out</div></td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</template>
