@@ -1,4 +1,6 @@
 Template.mobile.helpers
+  disconnected: ->
+    not Meteor.status().connected
   currentlySignedIn: ->
     TimeRecords.find {clockedOut: {$exists: false}}
 

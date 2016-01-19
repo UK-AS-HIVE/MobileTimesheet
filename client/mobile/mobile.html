@@ -5,6 +5,12 @@
     </div>
 
     <div class="row">
+      {{#if disconnected}}
+        (disconnected from server - results will sync when reconnected)
+      {{/if}}
+    </div>
+
+    <div class="row">
       {{> quickForm id="clockIn" collection="TimeRecords" type="insert"}}
     </div>
 
