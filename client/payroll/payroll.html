@@ -2,7 +2,27 @@
   <div class="container">
     <div class="row">
       <h1>Archaeology Remote Site Time Clock</h1>
-      <h4>Payroll Interface</h4>
+    </div>
+
+    <div class="row">
+      <h2>Records</h2>
+      <table class="table">
+        <tbody>
+          {{#each records}}
+          <tr>
+            <td>{{employeeName}}</td>
+            <td>{{projectName}}</td>
+            <td>{{jobSite}}</td>
+            <td>{{clockedIn}}</td>
+            <td>{{clockedOut}}</td>
+          </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="row">
+      <h2>Active Projects</h2>
     </div>
   </div>
 </template>
