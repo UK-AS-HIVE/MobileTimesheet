@@ -5,7 +5,9 @@ Router.route '/',
     else
       @redirect '/payroll'
 
-Router.route 'mobile'
+Router.route 'mobile',
+  path: '/mobile'
 
-Router.route 'payroll'
+Router.route 'payroll',
+  path: '/payroll'
 
