@@ -1,6 +1,6 @@
 Router.route '/',
   onBeforeAction: ->
-    if Meteor.isCordova
+    if Meteor.isCordova or /iPad|iPhone|Android/.test(navigator.userAgent)
       @redirect '/mobile'
     else
       @redirect '/payroll'
